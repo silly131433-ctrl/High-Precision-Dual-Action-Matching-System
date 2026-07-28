@@ -1,0 +1,6 @@
+{
+  "name": "生產模仁比對分析系統",
+  "description": "專業模具治具比對工具，支持 Excel 資料庫匯入與成針、單縮口雙模式，可自動依公差與角度公式尋找最佳 TP、BA、BP 模仁型號。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
