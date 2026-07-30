@@ -137,13 +137,13 @@ export default function App() {
   // Memoized calculations for matches to optimize performance
   const matchResults = useMemo(() => {
     // 1. Separate database by categories
-    const fixturesH12 = fixtures.filter(f => f.category === 'H12');
-    const fixturesH23 = fixtures.filter(f => f.category === 'H23');
+    const fixturesTP = fixtures.filter(f => f.category === 'H12' || f.category === 'H13' || f.category === 'H15');
+    const fixturesBA = fixtures.filter(f => f.category === 'H23');
     const fixturesBP = fixtures.filter(f => f.category === 'H32' || f.category === 'H33');
 
     // 2. Perform matches
-    const matchedTP = fixturesH12.map(f => matchTPCore(f, productType, needleInputs, neckingInputs));
-    const matchedBA = fixturesH23.map(f => matchBACore(f, productType, needleInputs, neckingInputs));
+    const matchedTP = fixturesTP.map(f => matchTPCore(f, productType, needleInputs, neckingInputs));
+    const matchedBA = fixturesBA.map(f => matchBACore(f, productType, needleInputs, neckingInputs));
     const matchedBP = fixturesBP.map(f => matchBPCore(f, productType, needleInputs, neckingInputs));
 
     return {
@@ -197,7 +197,7 @@ export default function App() {
                 </span>
               </h1>
               <p className="text-xs text-slate-400 mt-0.5">
-                高精密度 TP(H12)、BA(H23)、BP(H32/33) 治具型號規格智慧匹配工具
+                高精密度 TP(H12/13/15)、BA(H23)、BP(H32/33) 治具型號規格智慧匹配工具
               </p>
             </div>
           </div>

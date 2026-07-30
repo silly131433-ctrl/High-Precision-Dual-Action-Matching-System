@@ -29,6 +29,7 @@ export const DEMO_FIXTURES: FixtureData[] = [];
 // Excel Header mappings to support friendly auto-matching of varied header names
 export const EXCEL_COLUMN_MAP: Record<string, keyof Omit<FixtureData, 'id' | 'raw'>> = {
   '治具分類': 'category',
+  'PD分類': 'category',
   '分類': 'category',
   '治具型號': 'model',
   '型號': 'model',

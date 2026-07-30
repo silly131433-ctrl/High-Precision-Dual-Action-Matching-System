@@ -43,7 +43,7 @@ export const MatchResultTabs: React.FC<MatchResultTabsProps> = ({
   const getActiveResults = (): { results: MatchResult[]; title: string; category: string } => {
     switch (activeTab) {
       case 'TP':
-        return { results: resultsTP, title: 'TP 模仁', category: 'H12' };
+        return { results: resultsTP, title: 'TP 模仁', category: 'H12、H13、H15' };
       case 'BA':
         return { results: resultsBA, title: 'BA 模仁', category: 'H23' };
       case 'BP':
@@ -95,7 +95,7 @@ export const MatchResultTabs: React.FC<MatchResultTabsProps> = ({
                 {tab === 'TP' ? 'TP 模仁' : tab === 'BA' ? 'BA 模仁' : 'BP 模仁'}
               </span>
               <span className="text-[10px] font-medium text-slate-400 mt-0.5">
-                分類 {tab === 'TP' ? 'H12' : tab === 'BA' ? 'H23' : 'H32/H33'}
+                分類 {tab === 'TP' ? 'H12/13/15' : tab === 'BA' ? 'H23' : 'H32/H33'}
               </span>
               <div className="flex gap-1.5 mt-1">
                 <span className={`text-[9px] px-1.5 py-0.2 rounded-full ${

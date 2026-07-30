@@ -108,9 +108,11 @@ export function parseExcelFile(arrayBuffer: ArrayBuffer): {
           }
         } else if (fieldName === 'category') {
           if (colVal !== null && colVal !== undefined && String(colVal).trim() !== '') {
-            // Standardize category strings (e.g. "H12", "H23", "H32", "H33")
+            // Standardize category strings (e.g. "H12", "H13", "H15", "H23", "H32", "H33")
             let cat = String(colVal).trim().toUpperCase();
             if (cat.includes('12')) cat = 'H12';
+            else if (cat.includes('13')) cat = 'H13';
+            else if (cat.includes('15')) cat = 'H15';
             else if (cat.includes('23')) cat = 'H23';
             else if (cat.includes('32')) cat = 'H32';
             else if (cat.includes('33')) cat = 'H33';

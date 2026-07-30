@@ -26,7 +26,7 @@ export const RulesViewer: React.FC = () => {
                 : 'text-slate-600 hover:bg-slate-150'
             }`}
           >
-            <span>TP 模仁 (H12)</span>
+            <span>TP 模仁 (H12/H13/H15)</span>
             <ChevronRight className="w-3.5 h-3.5 opacity-60" />
           </button>
           
@@ -68,7 +68,7 @@ export const RulesViewer: React.FC = () => {
           {selectedCore === 'TP' && (
             <div className="space-y-5 animate-fadeIn">
               <div className="flex items-center gap-2">
-                <span className="text-xs font-bold text-blue-700 bg-blue-100 px-2 py-0.5 rounded">H12</span>
+                <span className="text-xs font-bold text-blue-700 bg-blue-100 px-2 py-0.5 rounded">H12 / H13 / H15</span>
                 <h4 className="font-bold text-slate-800 text-sm">TP 模仁對應條件</h4>
               </div>
 
